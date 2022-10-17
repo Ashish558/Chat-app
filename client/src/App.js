@@ -10,8 +10,12 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    const { token } = JSON.parse(localStorage.getItem("user"))
-    if (token) {
+    let userToken = null
+    if(JSON.parse(localStorage.getItem("user"))){
+      const { token } = JSON.parse(localStorage.getItem("user"))
+      userToken = token
+    }
+    if (userToken !== null) {
       dispatch(updateIsLoggedIn(true))
     }
   }, [])

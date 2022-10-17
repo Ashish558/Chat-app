@@ -2,7 +2,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var cors = require('cors')
-var path = require('path')
 // const cookieParser = require("cookie-parser")
 
 var app = express();
@@ -113,7 +112,6 @@ io.on("connection", (socket) => {
 });
 
 console.log('socket runnin')
-
 
 const port = process.env.PORT || 4000
 server.listen(port)
