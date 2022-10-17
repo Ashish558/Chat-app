@@ -40,15 +40,15 @@ mongoose.connection.on("error", () => {
 
 //authentication route
 var authRoute = require('./routes/auth')
-app.use('/user', authRoute)
+app.use('/api/user', authRoute)
 
 //chat room route
 var chatRoomRoute = require('./routes/conversation')
-app.use('/chatroom', chatRoomRoute)
+app.use('/api/chatroom', chatRoomRoute)
 
 //authentication route
 var messageRoute = require('./routes/message')
-app.use('/message', messageRoute)
+app.use('/api/message', messageRoute)
 
 const port = process.env.PORT || 4000
 server.listen(port)
