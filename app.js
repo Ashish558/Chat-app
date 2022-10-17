@@ -52,7 +52,7 @@ app.use('/api/message', messageRoute)
 
 
 // SOCKET 
-const io = require("socket.io")(4100, {
+const io = require("socket.io")(server, {
   cors: {
     origin: "http://localhost:3000"
   }
