@@ -57,6 +57,8 @@ const io = require("socket.io")(server, {
     origin: "http://localhost:3000"
   }
 })
+io.listen(5000);
+
 
 let users = []
 
