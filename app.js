@@ -22,9 +22,6 @@ app.use(express.static(__dirname + "/public"))
 
 var server = require('http').createServer(app)
 
-// app.use(express.static('client/build'));
-// app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'client', 'build','index.html')));
-
 mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("connected to db"))
   .catch((err) => console.log(err))
