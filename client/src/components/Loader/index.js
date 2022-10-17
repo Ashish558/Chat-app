@@ -5,7 +5,7 @@ export default function Loader({ width, height, border }) {
    const parentWidth = width + border * 2 + 'px'
    
    return (
-      <div class="lds-ring" style={{
+      <div className="lds-ring" style={{
          width: parentWidth ,
          height: parentWidth 
       }} >
