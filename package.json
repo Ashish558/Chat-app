@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "postinstall": "cd nested_dir && npm install"
+    "postinstall": "cd socket && npm install"
   },
   "author": "ash",
   "license": "ISC",
