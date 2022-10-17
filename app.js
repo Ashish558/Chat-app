@@ -11,7 +11,7 @@ const corsOptions = {
   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'X-Access-Token', 'Authorization', "auth-token"],
   credentials: true,
   methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-  origin: 'http://localhost:3000',
+  origin: process.env.FRONT_ORIGIN,
   preflightContinue: false,
 }
 
@@ -54,7 +54,7 @@ app.use('/api/message', messageRoute)
 // SOCKET 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:3000"
+    origin: process.env.FRONT_ORIGIN
   }
 })
 io.listen(5000);
